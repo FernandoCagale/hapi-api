@@ -72,7 +72,7 @@ module.exports = function() {
 	function applicationConfig(){
 		return {
 			'production' : {
-				'url' : 'https://' + process.env.NODE_HOST + ':' + process.env.NODE_PORT,
+				'url' : 'http://' + process.env.NODE_HOST + ':' + process.env.NODE_PORT,
 				'host' : process.env.NODE_HOST,
 				'port' : process.env.NODE_PORT
 			},
