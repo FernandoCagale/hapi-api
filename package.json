@@ -1,0 +1,32 @@
+{
+  "name": "hapi-api",
+  "version": "1.0.0",
+  "description": "Hapi - API",
+  "main": "app.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha test/**/*-test.js",
+    "apidoc": "./node_modules/.bin/apidoc -i src/routes/ -o doc/api/"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.1.0",
+    "boom": "^2.7.1",
+    "config": "^1.13.0",
+    "good": "^6.1.2",
+    "good-console": "^5.0.0",
+    "hapi": "^8.4.0",
+    "joi": "^6.4.1",
+    "js.augment": "0.0.1",
+    "jsonwebtoken": "^5.0.1",
+    "pg": "^4.3.0",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^2.1.0",
+    "underscore.string": "^3.0.3"
+  },
+  "devDependencies": {
+    "apidoc": "^0.12.3",
+    "chai": "^2.3.0",
+    "mocha": "^2.2.4"
+  }
+}
