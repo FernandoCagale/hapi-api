@@ -17,7 +17,7 @@ module.exports = function() {
 			user     : dbContants[env]['user'],
 			password : dbContants[env]['password'],
 			database : dbContants[env]['database'],
-			port 	 : dbContants[env]['port']
+			port 	 	 : dbContants[env]['port']
 		}
 	};
 
@@ -53,7 +53,7 @@ module.exports = function() {
 				'database' : 'hapi-todo'
 			},
 			'development' : {
-				'host' : 'localhost',
+				'host' : process.env.DB_DEV_HOST,
 				'user' : process.env.DB_DEV_USER,
 				'password' : process.env.DB_DEV_PASS,
 				'port' : process.env.DB_DEV_PORT,
@@ -72,7 +72,7 @@ module.exports = function() {
 	function applicationConfig(){
 		return {
 			'production' : {
-				'url' : 'https://' + process.env.NODE_HOST + ':' + process.env.NODE_PORT,
+				'url' : 'http://' + process.env.NODE_HOST + ':' + process.env.NODE_PORT,
 				'host' : process.env.NODE_HOST,
 				'port' : process.env.NODE_PORT
 			},
