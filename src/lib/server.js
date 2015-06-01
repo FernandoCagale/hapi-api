@@ -18,9 +18,12 @@ server.on('request-error', function (request, err) {
     console.log('Error response (500) sent for request: ' + request.route.path + ' because: ' + err.message);
 });
 
-server.register(plugins.concat(routes), function(err){
+server.register(plugins.concat(routes.concat(require('hapi-accept-language'))), function(err){
   if(err)
     throw err;
 });
+
+
+
 
 module.exports = server;

@@ -15,6 +15,8 @@ UserController.prototype = (function(){
 	  		var page = request.query.page | 0;
 	  		var search = request.query.search;
 
+	  		console.log(request.pre.language);
+
 	  		dao.find(page, search).then(function (user){
 	  			reply(user);
 	  		});

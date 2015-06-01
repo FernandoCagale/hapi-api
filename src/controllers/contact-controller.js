@@ -29,6 +29,8 @@ ContactControLler.prototype = (function(){
 	  	},		
 	    insert: function(request, reply) {
 
+	    	console.log(request.payload);
+
 	    	dao.insert(request.payload).then(function (contact){
 				reply(contact);
 	    	});
