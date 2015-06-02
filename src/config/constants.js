@@ -44,6 +44,7 @@ module.exports = function() {
 	return obj;
 
 	function databaseConfig(){
+
 		return {
 			'production' : {
 				'host' : process.env.DB_PRD_HOST,
@@ -70,6 +71,7 @@ module.exports = function() {
 	}
 
 	function applicationConfig(){
+
 		return {
 			'production' : {
 				'url' : 'http://' + process.env.NODE_HOST + ':' + process.env.NODE_PORT,
